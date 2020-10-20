@@ -22,6 +22,10 @@ namespace asp.net.core.angular {
             // Add Dependency Injection For AutoMapper
             services.AddAutoMapper(typeof(Startup));
 
+            // Register Repositories & Unit Of Work
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             // Add DB Context
             services.AddDbContext<VegaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
 

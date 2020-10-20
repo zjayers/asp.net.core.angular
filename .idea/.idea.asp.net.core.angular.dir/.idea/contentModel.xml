@@ -6,6 +6,7 @@
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".git/info/exclude" t="IncludeRecursive" />
       <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -14,6 +15,7 @@
       <e p="ClientApp" t="Include">
         <e p=".editorconfig" t="Include" />
         <e p=".gitignore" t="Include" />
+        <e p=".prettierrc" t="Include" />
         <e p="angular.json" t="Include" />
         <e p="browserslist" t="Include" />
         <e p="e2e" t="Include">
@@ -33,15 +35,6 @@
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="app.server.module.ts" t="Include" />
-            <e p="counter" t="Include">
-              <e p="counter.component.html" t="Include" />
-              <e p="counter.component.spec.ts" t="Include" />
-              <e p="counter.component.ts" t="Include" />
-            </e>
-            <e p="fetch-data" t="Include">
-              <e p="fetch-data.component.html" t="Include" />
-              <e p="fetch-data.component.ts" t="Include" />
-            </e>
             <e p="home" t="Include">
               <e p="home.component.html" t="Include" />
               <e p="home.component.ts" t="Include" />
@@ -50,6 +43,12 @@
               <e p="nav-menu.component.css" t="Include" />
               <e p="nav-menu.component.html" t="Include" />
               <e p="nav-menu.component.ts" t="Include" />
+            </e>
+            <e p="vehicle-form" t="Include">
+              <e p="vehicle-form.component.css" t="Include" />
+              <e p="vehicle-form.component.html" t="Include" />
+              <e p="vehicle-form.component.spec.ts" t="Include" />
+              <e p="vehicle-form.component.ts" t="Include" />
             </e>
           </e>
           <e p="assets" t="Include">
@@ -63,6 +62,9 @@
           <e p="karma.conf.js" t="Include" />
           <e p="main.ts" t="Include" />
           <e p="polyfills.ts" t="Include" />
+          <e p="services" t="Include">
+            <e p="vehicle.service.ts" t="Include" />
+          </e>
           <e p="styles.css" t="Include" />
           <e p="test.ts" t="Include" />
           <e p="tsconfig.app.json" t="Include" />
@@ -74,8 +76,16 @@
         <e p="tslint.json" t="Include" />
       </e>
       <e p="Controllers" t="Include">
+        <e p="FeaturesController.cs" t="Include" />
         <e p="MakesController.cs" t="Include" />
-        <e p="WeatherForecastController.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="ContactInformationResource.cs" t="Include" />
+          <e p="KeyValuePairResource.cs" t="Include" />
+          <e p="MakeResource.cs" t="Include" />
+          <e p="SaveVehicleResource.cs" t="Include" />
+          <e p="VehicleResource.cs" t="Include" />
+        </e>
+        <e p="VehiclesController.cs" t="Include" />
       </e>
       <e p="Mapping" t="Include">
         <e p="MappingProfile.cs" t="Include" />
@@ -87,11 +97,21 @@
         <e p="20201017234429_AddsConstraintsToInitialColumns.Designer.cs" t="Include" />
         <e p="20201017234700_SeedDatabase.cs" t="Include" />
         <e p="20201017234700_SeedDatabase.Designer.cs" t="Include" />
+        <e p="20201020143139_CreateFeatureTable.cs" t="Include" />
+        <e p="20201020143139_CreateFeatureTable.Designer.cs" t="Include" />
+        <e p="20201020143859_SeedFeaturesTable.cs" t="Include" />
+        <e p="20201020143859_SeedFeaturesTable.Designer.cs" t="Include" />
+        <e p="20201020170628_CreatesVehiclesTable.cs" t="Include" />
+        <e p="20201020170628_CreatesVehiclesTable.Designer.cs" t="Include" />
         <e p="VegaDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
+        <e p="ContactInformation.cs" t="Include" />
+        <e p="Feature.cs" t="Include" />
         <e p="Make.cs" t="Include" />
         <e p="Model.cs" t="Include" />
+        <e p="Vehicle.cs" t="Include" />
+        <e p="VehicleFeature.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
@@ -108,18 +128,21 @@
         <e p="Error.cshtml.cs" t="Include" />
       </e>
       <e p="Persistence" t="Include">
+        <e p="Repositories" t="Include">
+          <e p="IVehicleRepository.cs" t="Include" />
+          <e p="VehicleRepository.cs" t="Include" />
+        </e>
+        <e p="UnitOfWork" t="Include">
+          <e p="IUnitOfWork.cs" t="Include" />
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
         <e p="VegaDbContext.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
       </e>
-      <e p="Resources" t="Include">
-        <e p="MakeResource.cs" t="Include" />
-        <e p="ModelResource.cs" t="Include" />
-      </e>
       <e p="Startup.cs" t="Include" />
-      <e p="WeatherForecast.cs" t="Include" />
       <e p="wwwroot" t="Include">
         <e p="favicon.ico" t="Include" />
       </e>

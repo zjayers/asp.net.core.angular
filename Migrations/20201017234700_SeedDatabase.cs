@@ -10,7 +10,6 @@ namespace asp.net.core.angular.Migrations {
 
         protected override void Up(MigrationBuilder migrationBuilder) {
 
-
             migrationBuilder.Sql($"INSERT INTO Makes (Name) VALUES ('{Make1}'), ('{Make2}'), ('{Make3}')");
 
             migrationBuilder.Sql($"INSERT INTO Models (Name, MakeId) VALUES ('Make1-ModelA', (SELECT id FROM Makes WHERE Name = '{Make1}'))");

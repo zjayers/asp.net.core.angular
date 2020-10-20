@@ -1,9 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using asp.net.core.angular.Controllers.Resources;
 using asp.net.core.angular.Models;
 using asp.net.core.angular.Persistence;
-using asp.net.core.angular.wwwroot;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,11 +22,18 @@ namespace asp.net.core.angular.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("/api/makes")]
+        [HttpGet("/api/[controller]")]
         public async Task<IEnumerable<MakeResource>> GetMakes()
         {
             var makes = await _context.Makes.Include(m => m.Models).ToListAsync();
             return _mapper.Map<List<Make>, List<MakeResource>>(makes);
+        }
+
+        [HttpGet("/api/[controller]/{id}")]
+        public async Task<MakeResource> GetOneMake(int id)
+        {
+            var make = await _context.Makes.Include(m => m.Models).SingleOrDefaultAsync(m => m.Id == id);
+            return _mapper.Map<Make, MakeResource>(make);
         }
     }
 }

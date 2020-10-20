@@ -3,38 +3,33 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">asp.net.core.angular</a>
+      <a [routerLink]="['/']" class="navbar-brand">asp.net.core.angular</a>
       <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
         (click)="toggle()"
+        [attr.aria-expanded]="isExpanded"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-target=".navbar-collapse"
+        data-toggle="collapse"
+        type="button"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
         [ngClass]="{ show: isExpanded }"
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
       >
         <ul class="navbar-nav flex-grow">
           <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
             [routerLinkActiveOptions]="{ exact: true }"
+            [routerLinkActive]="['link-active']"
+            class="nav-item"
           >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+            <a [routerLink]="['/']" class="nav-link text-dark">Home</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
+          <li [routerLinkActive]="['link-active']" class="nav-item">
+            <a [routerLink]="['/vehicles/new']" class="nav-link text-dark"
+              >New IVehicle</a
             >
           </li>
         </ul>
