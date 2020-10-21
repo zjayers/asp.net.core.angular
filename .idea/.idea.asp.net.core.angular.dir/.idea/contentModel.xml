@@ -33,12 +33,14 @@
           <e p="app" t="Include">
             <e p="app.component.html" t="Include" />
             <e p="app.component.ts" t="Include" />
+            <e p="app.error-handler.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="app.server.module.ts" t="Include" />
             <e p="home" t="Include">
               <e p="home.component.html" t="Include" />
               <e p="home.component.ts" t="Include" />
             </e>
+            <e p="IVehicle.ts" t="Include" />
             <e p="nav-menu" t="Include">
               <e p="nav-menu.component.css" t="Include" />
               <e p="nav-menu.component.html" t="Include" />
@@ -87,6 +89,19 @@
         </e>
         <e p="VehiclesController.cs" t="Include" />
       </e>
+      <e p="Core" t="Include">
+        <e p="IUnitOfWork.cs" t="Include" />
+        <e p="IVehicleRepository.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="ContactInformation.cs" t="Include" />
+          <e p="Feature.cs" t="Include" />
+          <e p="Filter.cs" t="Include" />
+          <e p="Make.cs" t="Include" />
+          <e p="Model.cs" t="Include" />
+          <e p="Vehicle.cs" t="Include" />
+          <e p="VehicleFeature.cs" t="Include" />
+        </e>
+      </e>
       <e p="Mapping" t="Include">
         <e p="MappingProfile.cs" t="Include" />
       </e>
@@ -105,14 +120,6 @@
         <e p="20201020170628_CreatesVehiclesTable.Designer.cs" t="Include" />
         <e p="VegaDbContextModelSnapshot.cs" t="Include" />
       </e>
-      <e p="Models" t="Include">
-        <e p="ContactInformation.cs" t="Include" />
-        <e p="Feature.cs" t="Include" />
-        <e p="Make.cs" t="Include" />
-        <e p="Model.cs" t="Include" />
-        <e p="Vehicle.cs" t="Include" />
-        <e p="VehicleFeature.cs" t="Include" />
-      </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -129,11 +136,9 @@
       </e>
       <e p="Persistence" t="Include">
         <e p="Repositories" t="Include">
-          <e p="IVehicleRepository.cs" t="Include" />
           <e p="VehicleRepository.cs" t="Include" />
         </e>
         <e p="UnitOfWork" t="Include">
-          <e p="IUnitOfWork.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
         </e>
         <e p="VegaDbContext.cs" t="Include" />

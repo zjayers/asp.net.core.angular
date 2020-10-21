@@ -7,8 +7,8 @@ namespace asp.net.core.angular.Controllers.Resources
 {
     public class SaveVehicleResource
     {
-        public int Id { get; set; }
-        public int ModelId { get; set; }
+        public string Id { get; set; }
+        public string ModelId { get; set; }
         public bool IsRegistered { get; set; }
 
         [Required]
