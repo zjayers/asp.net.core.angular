@@ -7,7 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PhotoService } from './services/photo.service';
 import { VehicleService } from './services/vehicle.service';
 import { ToastyModule } from 'ng2-toasty';
-
+import { AuthModule, AuthService } from '@auth0/auth0-angular';
 import { AppComponent } from './app.component';
 import { AppErrorHandler } from './app.error-handler';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +16,7 @@ import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.com
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
 import { ViewVehicleComponent } from './components/view-vehicle/view-vehicle.component';
+import { AuthButtonComponent } from './auth-button/auth-button.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ViewVehicleComponent } from './components/view-vehicle/view-vehicle.com
     VehicleListComponent,
     PaginationComponent,
     ViewVehicleComponent,
+    AuthButtonComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +35,10 @@ import { ViewVehicleComponent } from './components/view-vehicle/view-vehicle.com
     ToastyModule.forRoot(),
     FontAwesomeModule,
     FormsModule,
+    AuthModule.forRoot({
+      domain: 'vega-ayers.us.auth0.com',
+      clientId: 'OB7zRSnnKN2WXMz5v7BV5Ok7urVZa5WX',
+    }),
     RouterModule.forRoot([
       { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
       {
@@ -60,6 +66,7 @@ import { ViewVehicleComponent } from './components/view-vehicle/view-vehicle.com
   providers: [
     VehicleService,
     PhotoService,
+    AuthService,
     { provide: ErrorHandler, useClass: AppErrorHandler },
   ],
   bootstrap: [AppComponent],
