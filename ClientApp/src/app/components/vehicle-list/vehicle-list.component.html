@@ -1,0 +1,67 @@
+<button class="btn btn-dark m-1 d-inline" (click)="resetFilters()">
+  Reset Filters
+</button>
+<div class="form-group card card-body bg-light flex-row">
+  <div class="container">
+    <label for="make">Make</label
+    ><select
+      id="make"
+      class="form-control"
+      [(ngModel)]="query.makeId"
+      (change)="onFilterChange()"
+    >
+      <option value=""></option>
+      <option *ngFor="let m of makes" value="{{ m.id }}">{{ m.name }}</option>
+    </select>
+  </div>
+  <div class="container">
+    <label for="model">Model</label
+    ><select
+      id="model"
+      class="form-control"
+      [(ngModel)]="query.modelId"
+      (change)="onFilterChange()"
+    >
+      <option value=""></option>
+      <option *ngFor="let m of models" value="{{ m.id }}">
+        {{ m.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let c of columns">
+        <div (click)="sortBy(c.key)" *ngIf="c.isSortable; else notSortable">
+          {{ c.title }}
+          <fa-icon
+            *ngIf="query.sortBy === c.key"
+            [icon]="query.isSortAscending ? faSortUp : faSortDown"
+          ></fa-icon>
+        </div>
+        <ng-template #notSortable>
+          {{ c.title }}
+        </ng-template>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of queryResult.items">
+      <td>{{ v.id }}</td>
+      <td>{{ v.make.name }}</td>
+      <td>{{ v.model.name }}</td>
+      <td>{{ v.contact?.name }}</td>
+      <td>
+        <a [routerLink]="['/vehicles/', v.id]">View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-pagination
+  [totalItems]="queryResult.totalItems"
+  [pageSize]="query.pageSize"
+  (pageChanged)="onPageChange($event)"
+></app-pagination>

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using asp.net.core.angular.Controllers.Resources;
+using asp.net.core.angular.Core.Models;
 using asp.net.core.angular.Models;
 using AutoMapper;
 
@@ -15,7 +16,8 @@ namespace asp.net.core.angular.Mapping
             CreateMap<Make, KeyValuePairResource>();
             CreateMap<Model, KeyValuePairResource>();
             CreateMap<Feature, KeyValuePairResource>();
-
+            CreateMap<Photo, PhotoResource>();
+            CreateMap(typeof(QueryResult<>), typeof(QueryResultResource<>)); //Map Generic Classes
             CreateMap<Vehicle, SaveVehicleResource>()
                 .ForMember(vr => vr.Contact,
                     opt => opt.MapFrom(v => new ContactInformationResource()
@@ -38,6 +40,7 @@ namespace asp.net.core.angular.Mapping
                         v.Features.Select(vf => new KeyValuePairResource() {Id = vf.Feature.Id, Name = vf.Feature.Name})));
 
             // API Resource To Domain
+            CreateMap<VehicleQueryResource, VehicleQuery>();
             CreateMap<SaveVehicleResource, Vehicle>()
                 .ForMember(v => v.Id, opt => opt.Ignore())
                 .ForPath(v => v.ContactInformation.Name,

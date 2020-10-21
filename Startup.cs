@@ -1,4 +1,7 @@
+using asp.net.core.angular.Core;
+using asp.net.core.angular.Core.Models;
 using asp.net.core.angular.Persistence;
+using asp.net.core.angular.Persistence.Repositories;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,13 +20,18 @@ namespace asp.net.core.angular {
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services) {
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+            // Setup Photo Upload Settings
+            services.Configure<PhotoSettings>(Configuration.GetSection("PhotoSettings"));
 
             // Add Dependency Injection For AutoMapper
             services.AddAutoMapper(typeof(Startup));
 
             // Register Repositories & Unit Of Work
             services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IPhotoRepository, PhotoRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // Add DB Context

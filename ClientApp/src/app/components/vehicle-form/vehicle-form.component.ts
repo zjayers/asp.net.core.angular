@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastyService } from 'ng2-toasty';
 import { forkJoin } from 'rxjs';
 import { VehicleService } from '../../services/vehicle.service';
-import { ISaveVehicle, IVehicle } from '../IVehicle';
+import { ISaveVehicle, IVehicle } from '../../types';
 
 @Component({
   selector: 'app-vehicle-form',
@@ -34,7 +34,7 @@ export class VehicleFormComponent implements OnInit {
     private router: Router
   ) {
     route.params.subscribe((p) => {
-      this.vehicle.id = +p['id'];
+      this.vehicle.id = +p['id'] || 0;
     });
   }
 
@@ -97,14 +97,18 @@ export class VehicleFormComponent implements OnInit {
   }
 
   submit() {
-    this.vehicleService.create(this.vehicle).subscribe((x) => console.log(x));
-  }
-
-  delete() {
-    if (confirm('Are you sure?')) {
-      this.vehicleService.delete(this.vehicle.id).subscribe((x) => {
-        this.router.navigate(['']);
+    const result$ = this.vehicle.id
+      ? this.vehicleService.update(this.vehicle)
+      : this.vehicleService.create(this.vehicle);
+    result$.subscribe((vehicle: ISaveVehicle) => {
+      this.toastyService.success({
+        title: 'Success',
+        msg: 'Data was sucessfully saved.',
+        theme: 'bootstrap',
+        showClose: true,
+        timeout: 5000,
       });
-    }
+      this.router.navigate(['/vehicles/', vehicle.id]);
+    });
   }
 }

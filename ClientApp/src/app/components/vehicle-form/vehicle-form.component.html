@@ -140,13 +140,4 @@
   </div>
 
   <button [disabled]="!f.valid" class="btn btn-primary">Submit</button>{{ ' ' }}
-  <button
-    *ngIf="vehicle.id"
-    [disabled]="!f.valid"
-    class="btn btn-danger"
-    type="button"
-    (click)="delete()"
-  >
-    Delete
-  </button>
 </form>

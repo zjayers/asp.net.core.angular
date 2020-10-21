@@ -1,0 +1,88 @@
+<h1>Vehicle</h1>
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="vehicle-tab"
+        data-toggle="tab"
+        href="#nav-vehicle"
+        role="tab"
+        aria-controls="nav-vehicle"
+        aria-selected="true"
+        >Vehicle</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="photo-tab"
+        data-toggle="tab"
+        href="#nav-photos"
+        role="tab"
+        aria-controls="nav-photo"
+        aria-selected="false"
+        >Photos</a
+      >
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content" id="nav-tabContent" *ngIf="vehicle">
+    <!-- Vehicle tab -->
+    <div
+      class="tab-pane fade show active"
+      id="nav-vehicle"
+      role="tabpanel"
+      aria-labelledby="nav-vehicle-tab"
+    >
+      <h2>Basics</h2>
+      <ul>
+        <li>Make: {{ vehicle.make.name }}</li>
+        <li>Model: {{ vehicle.model.name }}</li>
+        <li>Registered: {{ vehicle.isRegistered ? 'Yes' : 'No' }}</li>
+      </ul>
+
+      <h2>Features</h2>
+      <ul>
+        <li *ngFor="let f of vehicle.features">{{ f.name }}</li>
+      </ul>
+      <h2>Contact</h2>
+      <ul>
+        <li>Contact Name: {{ vehicle.contact.name }}</li>
+        <li>Contact Phone: {{ vehicle.contact.phone }}</li>
+        <li>Contact Email: {{ vehicle.contact.email }}</li>
+      </ul>
+      <br />
+      <p>
+        <a
+          class="btn btn-primary"
+          [routerLink]="['/vehicles/edit/', vehicle.id]"
+          >Edit</a
+        >
+        <button class="btn btn-danger m-2" (click)="delete()">Delete</button>
+        <a class="btn btn-dark" [routerLink]="['/vehicles']"
+          >View All Vehicles</a
+        >
+      </p>
+    </div>
+    <!-- Photos tab -->
+    <div
+      class="tab-pane fade"
+      id="nav-photos"
+      role="tabpanel"
+      aria-labelledby="nav-photos-tab"
+    >
+      <h2>Photos</h2>
+      <input type="file" (change)="uploadPhoto($event)" />
+
+      <img
+        *ngFor="let photo of photos"
+        src="/uploads/{{ photo.fileName }}"
+        alt=""
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
+</div>

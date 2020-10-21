@@ -36,21 +36,55 @@
             <e p="app.error-handler.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="app.server.module.ts" t="Include" />
-            <e p="home" t="Include">
-              <e p="home.component.html" t="Include" />
-              <e p="home.component.ts" t="Include" />
+            <e p="components" t="Include">
+              <e p="home" t="Include">
+                <e p="home.component.html" t="Include" />
+                <e p="home.component.ts" t="Include" />
+              </e>
+              <e p="nav-menu" t="Include">
+                <e p="nav-menu.component.css" t="Include" />
+                <e p="nav-menu.component.html" t="Include" />
+                <e p="nav-menu.component.ts" t="Include" />
+              </e>
+              <e p="shared" t="Include">
+                <e p="pagination" t="Include">
+                  <e p="pagination.component.css" t="Include" />
+                  <e p="pagination.component.html" t="Include" />
+                  <e p="pagination.component.spec.ts" t="Include" />
+                  <e p="pagination.component.ts" t="Include" />
+                </e>
+              </e>
+              <e p="vehicle-form" t="Include">
+                <e p="vehicle-form.component.css" t="Include" />
+                <e p="vehicle-form.component.html" t="Include" />
+                <e p="vehicle-form.component.spec.ts" t="Include" />
+                <e p="vehicle-form.component.ts" t="Include" />
+              </e>
+              <e p="vehicle-list" t="Include">
+                <e p="vehicle-list.component.css" t="Include" />
+                <e p="vehicle-list.component.html" t="Include" />
+                <e p="vehicle-list.component.spec.ts" t="Include" />
+                <e p="vehicle-list.component.ts" t="Include" />
+              </e>
+              <e p="view-vehicle" t="Include">
+                <e p="view-vehicle.component.css" t="Include" />
+                <e p="view-vehicle.component.html" t="Include" />
+                <e p="view-vehicle.component.spec.ts" t="Include" />
+                <e p="view-vehicle.component.ts" t="Include" />
+              </e>
             </e>
-            <e p="IVehicle.ts" t="Include" />
-            <e p="nav-menu" t="Include">
-              <e p="nav-menu.component.css" t="Include" />
-              <e p="nav-menu.component.html" t="Include" />
-              <e p="nav-menu.component.ts" t="Include" />
+            <e p="services" t="Include">
+              <e p="photo.service.ts" t="Include" />
+              <e p="vehicle.service.ts" t="Include" />
             </e>
-            <e p="vehicle-form" t="Include">
-              <e p="vehicle-form.component.css" t="Include" />
-              <e p="vehicle-form.component.html" t="Include" />
-              <e p="vehicle-form.component.spec.ts" t="Include" />
-              <e p="vehicle-form.component.ts" t="Include" />
+            <e p="types" t="Include">
+              <e p="IContact.ts" t="Include" />
+              <e p="IKeyValuePair.ts" t="Include" />
+              <e p="index.ts" t="Include" />
+              <e p="IQuery.ts" t="Include" />
+              <e p="IQueryResult.ts" t="Include" />
+              <e p="ISaveVehicle.ts" t="Include" />
+              <e p="IVehicle.ts" t="Include" />
             </e>
           </e>
           <e p="assets" t="Include">
@@ -64,9 +98,6 @@
           <e p="karma.conf.js" t="Include" />
           <e p="main.ts" t="Include" />
           <e p="polyfills.ts" t="Include" />
-          <e p="services" t="Include">
-            <e p="vehicle.service.ts" t="Include" />
-          </e>
           <e p="styles.css" t="Include" />
           <e p="test.ts" t="Include" />
           <e p="tsconfig.app.json" t="Include" />
@@ -80,27 +111,39 @@
       <e p="Controllers" t="Include">
         <e p="FeaturesController.cs" t="Include" />
         <e p="MakesController.cs" t="Include" />
+        <e p="PhotosController.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="ContactInformationResource.cs" t="Include" />
           <e p="KeyValuePairResource.cs" t="Include" />
           <e p="MakeResource.cs" t="Include" />
+          <e p="PhotoResource.cs" t="Include" />
+          <e p="QueryResultResource.cs" t="Include" />
           <e p="SaveVehicleResource.cs" t="Include" />
+          <e p="VehicleQueryResource.cs" t="Include" />
           <e p="VehicleResource.cs" t="Include" />
         </e>
         <e p="VehiclesController.cs" t="Include" />
       </e>
       <e p="Core" t="Include">
+        <e p="IPhotoRepository.cs" t="Include" />
         <e p="IUnitOfWork.cs" t="Include" />
         <e p="IVehicleRepository.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="ContactInformation.cs" t="Include" />
           <e p="Feature.cs" t="Include" />
-          <e p="Filter.cs" t="Include" />
           <e p="Make.cs" t="Include" />
           <e p="Model.cs" t="Include" />
+          <e p="Photo.cs" t="Include" />
+          <e p="PhotoSettings.cs" t="Include" />
+          <e p="QueryResult.cs" t="Include" />
           <e p="Vehicle.cs" t="Include" />
           <e p="VehicleFeature.cs" t="Include" />
+          <e p="VehicleQuery.cs" t="Include" />
         </e>
+      </e>
+      <e p="extensions" t="Include">
+        <e p="IQueryableExtensions.cs" t="Include" />
+        <e p="IQueryObject.cs" t="Include" />
       </e>
       <e p="Mapping" t="Include">
         <e p="MappingProfile.cs" t="Include" />
@@ -118,6 +161,8 @@
         <e p="20201020143859_SeedFeaturesTable.Designer.cs" t="Include" />
         <e p="20201020170628_CreatesVehiclesTable.cs" t="Include" />
         <e p="20201020170628_CreatesVehiclesTable.Designer.cs" t="Include" />
+        <e p="20201021173347_CreatePhotoTable.cs" t="Include" />
+        <e p="20201021173347_CreatePhotoTable.Designer.cs" t="Include" />
         <e p="VegaDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
@@ -136,6 +181,7 @@
       </e>
       <e p="Persistence" t="Include">
         <e p="Repositories" t="Include">
+          <e p="PhotoRepository.cs" t="Include" />
           <e p="VehicleRepository.cs" t="Include" />
         </e>
         <e p="UnitOfWork" t="Include">
@@ -150,6 +196,15 @@
       <e p="Startup.cs" t="Include" />
       <e p="wwwroot" t="Include">
         <e p="favicon.ico" t="Include" />
+        <e p="uploads" t="Include">
+          <e p="4e44c2f3-7d34-465a-bc17-35b7e34054fb.jpg" t="Include" />
+          <e p="6248a0f1-753b-4e35-a8ef-1ed482a31ddc.jpg" t="Include" />
+          <e p="7d50840c-85b9-49f5-b22c-21dc9521045b.jpg" t="Include" />
+          <e p="94369b66-cc14-41c3-b624-6c488a6d26d9.jpg" t="Include" />
+          <e p="945e7af8-32d0-4fed-9b93-159f7fac8d85.jpg" t="Include" />
+          <e p="9f1659eb-be12-4276-a511-8fc837b65efa.jpg" t="Include" />
+          <e p="ba2cd79e-4e03-48f8-8ca5-ff601dabb88a.jpg" t="Include" />
+        </e>
       </e>
     </e>
   </component>

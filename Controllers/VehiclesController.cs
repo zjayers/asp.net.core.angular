@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using asp.net.core.angular.Controllers.Resources;
+using asp.net.core.angular.Core;
+using asp.net.core.angular.Core.Models;
 using asp.net.core.angular.Models;
 using asp.net.core.angular.Persistence;
 using AutoMapper;
@@ -20,6 +23,15 @@ namespace asp.net.core.angular.Controllers
             _mapper = mapper;
             _vehicleRepository = vehicleRepository;
             _unitOfWork = unitOfWork;
+        }
+
+        [HttpGet]
+        public async Task<QueryResultResource<VehicleResource>> GetAllVehicles(VehicleQueryResource vehicleQueryResource)
+        {
+            var filter = _mapper.Map<VehicleQueryResource, VehicleQuery>(vehicleQueryResource);
+            var queryResult = await _vehicleRepository.GetVehicles(filter);
+
+            return _mapper.Map<QueryResult<Vehicle>, QueryResultResource<VehicleResource>>(queryResult);
         }
 
         [HttpGet("{id}")]
