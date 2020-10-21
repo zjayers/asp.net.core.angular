@@ -26,37 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a624265b-70b3-4f9f-9310-0026375ddc37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/vehicle.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/types/IVehicle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/dataSources/48b39259-5904-48c8-8ac2-22403b97f2e1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/dataSources/48b39259-5904-48c8-8ac2-22403b97f2e1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.asp.net.core.angular.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/IVehicle.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/nav-menu/nav-menu.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/nav-menu/nav-menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/nav-menu/nav-menu.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/vehicle-form/vehicle-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/vehicle-form/vehicle-form.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/vehicle-form/vehicle-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/vehicle-form/vehicle-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/vehicle-form/vehicle-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/vehicle-form/vehicle-form.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/vehicle-form/vehicle-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/components/vehicle-form/vehicle-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/services/vehicle.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Resources/SaveVehicleResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Resources/SaveVehicleResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/VehiclesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/VehiclesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/IVehicleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/IVehicleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/Filter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/VehicleQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/Vehicle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/Vehicle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapping/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/VegaDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/VegaDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Persistence/Repositories/VehicleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/Repositories/VehicleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Persistence/VegaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/VegaDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/4e44c2f3-7d34-465a-bc17-35b7e34054fb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/6248a0f1-753b-4e35-a8ef-1ed482a31ddc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/7d50840c-85b9-49f5-b22c-21dc9521045b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/94369b66-cc14-41c3-b624-6c488a6d26d9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/945e7af8-32d0-4fed-9b93-159f7fac8d85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/9f1659eb-be12-4276-a511-8fc837b65efa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/uploads/ba2cd79e-4e03-48f8-8ca5-ff601dabb88a.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +98,7 @@
         <option value="$PROJECT_DIR$/Core/IPhotoRepository.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Controllers/PhotosController.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -186,7 +164,7 @@
       <workItem from="1603203645931" duration="16214000" />
       <workItem from="1603233057504" duration="829000" />
       <workItem from="1603234270503" duration="4850000" />
-      <workItem from="1603286356471" duration="13633000" />
+      <workItem from="1603286356471" duration="13783000" />
     </task>
     <servers />
   </component>
